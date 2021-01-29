@@ -11,5 +11,5 @@ https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium?tabs=c-sharp
 Add executable to path 
 
 ```
-python reservations.py
+python reservationsbot.py
 ```
