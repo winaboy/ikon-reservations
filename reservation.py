@@ -33,6 +33,7 @@ class ReservationEngine:
 
     def login(self):
         #login
+        print("Logging in")
         self.driver.get("https://account.ikonpass.com/en/login?redirect_uri=/en/myaccount/add-reservations/")
         self.remove_overlay()
         email_box = self.driver.find_element_by_css_selector("input#email")
@@ -41,6 +42,7 @@ class ReservationEngine:
         password_box.send_keys(self.password)
         submit = self.driver.find_element_by_css_selector("button.submit")
         submit.click()
+        WebDriverWait(self.driver,10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input.react-autosuggest__input')))   
         print("Logged in")
 
     def refresh(self):
