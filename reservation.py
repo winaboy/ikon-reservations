@@ -80,7 +80,7 @@ class ReservationEngine:
         self.booked = "confirmed" in day_classes
         div = self.driver.find_elements_by_xpath("//div[contains(text(), 'Reservation Limit Reached')]")
         self.reservations_left = len(div) == 0
-        print("Date Selected: "+ date_str)
+        print("Date Selected: "+ date)
 
     def reserve(self):
         #confirm reservation if available
